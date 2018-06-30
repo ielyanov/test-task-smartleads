@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="https://getbootstrap.com/favicon.ico">
+
+    <title>Тестовое задание Игорь Элянов</title>
+    <!-- Bootstrap core CSS -->
+    <link href="./assets/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-light">
+
+    <div class="container">
+      <div class="py-3 text-center">
+        <h2>Форма</h2>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12 order-md-1">
+          <form class="needs-validation" novalidate="" action="form.php" method="POST">
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="Name">Имя</label>
+                <input type="text" class="form-control" id="Name" name="name" value="" required="">
+                <div class="invalid-feedback">
+                  Введите имя
+                </div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="SecondName">Фамилия</label>
+                <input type="text" class="form-control" id="SecondName" name="secondname" value="" required="">
+                <div class="invalid-feedback">
+                  Введите фамилию
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="email">Эл. почта</label>
+              <input type="email" class="form-control" id="Email" name="email" placeholder="you@example.com" value="" required="">
+              <div class="invalid-feedback">
+                Пожалуйста введите корректный email.
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="message">Введите сообщение</label>
+              <textarea class="form-control" id="message" name="message" required=""></textarea>
+              <div class="invalid-feedback">
+                Пожалуйста введите сообщение.
+              </div>
+            </div>
+
+            <hr class="mb-4">
+            <button class="btn btn-primary btn-lg btn-block" type="submit">Отправить</button>
+            <a href="install.php" class="btn btn-warning btn-lg btn-block" target="_blank">Создать базу данных</a>
+          </form>
+        </div>
+      </div>
+
+      <footer class="my-3 pt-3 text-muted text-center text-small">
+        <p class="mb-1">© 2018 Тестовое задание</p>
+      </footer>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="./assets/js/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <script>
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (function() {
+        'use strict';
+
+        window.addEventListener('load', function() {
+          // Fetch all the forms we want to apply custom Bootstrap validation styles to
+          var forms = document.getElementsByClassName('needs-validation');
+
+          // Loop over them and prevent submission
+          var validation = Array.prototype.filter.call(forms, function(form) {
+            form.addEventListener('submit', function(event) {
+              if (form.checkValidity() === false) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+              form.classList.add('was-validated');
+            }, false);
+          });
+        }, false);
+      })();
+    </script>
+  
+
+</body></html>
